@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/secondary_nav_graph"
+    app:startDestination="@id/secondaryNavComponentOneFragment">
+
+    <fragment
+        android:id="@+id/secondaryNavComponentOneFragment"
+        android:name="com.example.navigationcomponentsdemo.moduleTwo.SecondaryNavComponentOneFragment"
+        android:label="SecondaryNavComponentOneFragment" >
+        <action
+            android:id="@+id/action_secondaryNavComponentOneFragment_to_secondaryNavComponentThreeFragment"
+            app:destination="@id/secondaryNavComponentThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondaryNavComponentThreeFragment"
+        android:name="com.example.navigationcomponentsdemo.moduleTwo.SecondaryNavComponentThreeFragment"
+        android:label="SecondaryNavComponentThreeFragment" >
+        <argument
+            android:name="textFromPreviousSecondaryFragment"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondaryNavComponentFourFragment"
+        android:name="com.example.navigationcomponentsdemo.moduleTwo.SecondaryNavComponentFourFragment"
+        android:label="SecondaryNavComponentFourFragment" >
+        <argument
+            android:name="textFromPreviousSecondaryFragment"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondaryNavComponentTwoFragment"
+        android:name="com.example.navigationcomponentsdemo.moduleTwo.SecondaryNavComponentTwoFragment"
+        android:label="SecondaryNavComponentTwoFragment" >
+        <action
+            android:id="@+id/action_secondaryNavComponentTwoFragment_to_secondaryNavComponentFourFragment"
+            app:destination="@id/secondaryNavComponentFourFragment" />
+    </fragment>
+</navigation>

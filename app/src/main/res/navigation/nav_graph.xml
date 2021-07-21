@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/navComponentOneFragment">
+
+    <fragment
+        android:id="@+id/navComponentOneFragment"
+        android:name="com.example.navigationcomponentsdemo.moduleOne.NavComponentOneFragment"
+        android:label="NavComponentOneFragment">
+        <action
+            android:id="@+id/action_navComponentOneFragment_to_navComponentThreeFragment"
+            app:destination="@id/navComponentThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navComponentTwoFragment"
+        android:name="com.example.navigationcomponentsdemo.moduleOne.NavComponentTwoFragment"
+        android:label="NavComponentTwoFragment">
+        <action
+            android:id="@+id/action_navComponentTwoFragment_to_navComponentFourFragment"
+            app:destination="@id/navComponentFourFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navComponentThreeFragment"
+        android:name="com.example.navigationcomponentsdemo.moduleOne.NavComponentThreeFragment"
+        android:label="NavComponentThreeFragment" >
+        <argument
+            android:name="textFromPreviousFragment"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/navComponentFourFragment"
+        android:name="com.example.navigationcomponentsdemo.moduleOne.NavComponentFourFragment"
+        android:label="NavComponentFourFragment" >
+        <argument
+            android:name="textFromPreviousFragment"
+            app:argType="string" />
+    </fragment>
+</navigation>
