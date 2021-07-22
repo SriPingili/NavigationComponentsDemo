@@ -36,4 +36,12 @@
             android:name="textFromPreviousFragment"
             app:argType="string" />
     </fragment>
+    <activity
+        android:id="@+id/secondaryActivity"
+        android:name="com.example.navigationcomponentsdemo.moduleTwo.SecondaryActivity"
+        android:label="SecondaryActivity" >
+        <argument
+            android:name="sample_text"
+            app:argType="string" />
+    </activity>
 </navigation>

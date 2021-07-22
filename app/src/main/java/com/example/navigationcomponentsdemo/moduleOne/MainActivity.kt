@@ -1,11 +1,9 @@
 package com.example.navigationcomponentsdemo.moduleOne
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.example.navigationcomponentsdemo.R
-import com.example.navigationcomponentsdemo.moduleTwo.SecondaryActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +25,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         button.setOnClickListener {
-            startActivity(Intent(this, SecondaryActivity::class.java))
+//            startActivity(Intent(this, SecondaryActivity::class.java))
+
+            val bundle = Bundle()
+            bundle.putString("sample_text", "this text is being passed from MainActivity.kt")
+
+            navController.navigate(R.id.secondaryActivity, bundle)
         }
     }
 

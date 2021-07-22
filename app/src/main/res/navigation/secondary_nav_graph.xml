@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_secondaryNavComponentOneFragment_to_secondaryNavComponentThreeFragment"
             app:destination="@id/secondaryNavComponentThreeFragment" />
+        <argument
+            android:name="sample_text"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/secondaryNavComponentThreeFragment"
