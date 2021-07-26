@@ -37,8 +37,10 @@ public class SecondaryActivity extends AppCompatActivity {
         secondaryFragmentTwoId = findViewById(R.id.secondaryFragmentTwoId);
 
         secondaryFragmentOneId.setOnClickListener(v -> {
+            Bundle bundle = new Bundle();
+            bundle.putString("sample_text", "sample text");
             navController.navigateUp();
-            navController.navigate(R.id.secondaryNavComponentOneFragment);
+            navController.navigate(R.id.secondaryNavComponentOneFragment, bundle);
         });
 
         secondaryFragmentTwoId.setOnClickListener(v -> {
